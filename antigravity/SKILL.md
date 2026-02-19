@@ -17,7 +17,9 @@ triggers:
 
 *Your ideas. Your voice. We just help you get unstuck.*
 
-Helps scholars push through writer's block, literature overwhelm, and revision paralysis — while keeping YOUR voice at the center. Learns YOUR style, not generic academic-ese.
+**Does NOT:** Write your paper, generate arguments, replace reading, work without your input.
+
+**DOES:** Help with writer's block, organize literature, learn YOUR voice, provide scaffolding in YOUR style.
 
 ## Trigger Patterns
 

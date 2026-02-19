@@ -14,6 +14,23 @@ This framework is under active development at the [LampBotics AI Lab](https://la
 
 ---
 
+## What CommScribe Does NOT Do
+
+Let's be clear upfront:
+
+| ❌ We Don't | Why Not |
+|-------------|---------|
+| **Write your paper for you** | That's your job. The ideas have to be yours. |
+| **Generate arguments** | Arguments come from thinking, not prompts. |
+| **Replace reading** | You still need to read the papers. We help organize, not understand for you. |
+| **Guarantee "undetectable" output** | That framing is dishonest. We help you sound like YOU, not hide anything. |
+| **Work without your input** | No samples = no voice profile = generic output. Garbage in, garbage out. |
+| **Make bad ideas good** | If the concept is weak, better prose won't save it. |
+
+If you want a tool that writes papers while you sleep, this isn't it.
+
+---
+
 ## The Problem: Getting Stuck
 
 Every academic knows the feeling:

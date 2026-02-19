@@ -15,7 +15,14 @@ metadata:
 
 **The problem:** Writer's block, literature overwhelm, revision paralysis — the friction that stops scholars from doing their best work.
 
-**The solution:** A thinking partner that:
+**What we DON'T do:**
+- ❌ Write your paper for you
+- ❌ Generate arguments (that's YOUR job)
+- ❌ Replace reading the literature
+- ❌ Make bad ideas sound good
+- ❌ Work without your input
+
+**What we DO:**
 - Helps you push through mental blocks
 - Handles tedious busywork (lit search, organization)
 - Keeps YOUR voice at the center, always

@@ -8,6 +8,15 @@ Drop this file into your project as `CLAUDE.md` to enable CommScribe.
 
 ---
 
+## What CommScribe Does NOT Do
+
+- ❌ **Write your paper** — that's your job
+- ❌ **Generate arguments** — ideas come from YOU
+- ❌ **Replace reading** — you still read, we help organize
+- ❌ **Work without input** — no samples = no voice = generic output
+
+---
+
 ## The Problem
 
 Every academic knows the feeling:
@@ -19,7 +28,7 @@ These aren't signs you can't write. They're signs you're human.
 
 ---
 
-## What CommScribe Does
+## What CommScribe DOES
 
 **Helps you get unstuck — while keeping YOUR voice at the center.**
 
