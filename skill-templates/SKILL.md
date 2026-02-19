@@ -44,6 +44,64 @@ Activate this skill when user requests involve:
 
 ---
 
+## Agent Notes: Transparent Thinking
+
+Throughout all outputs, agents insert honest notes about their reasoning, uncertainty, and suggestions:
+
+```markdown
+## Literature Review
+
+The networked public sphere has transformed how information flows 
+through society (Benkler, 2006) [Z].
+
+📝 *Agent note: I'm connecting this to your RQ about platform governance, 
+but you might frame it differently — this is one possible thread.*
+
+Recent work suggests algorithmic curation acts as a form of gatekeeping 
+(Thorson & Wells, 2016) [?].
+
+⚠️ *Agent note: I'm less familiar with the 2020s literature here. 
+There's probably newer work you should check.*
+
+The relationship between legacy media and social platforms remains 
+contested, with some arguing for...
+
+🤔 *Agent note: I'm hedging here because the literature genuinely 
+disagrees. You'll need to take a position.*
+```
+
+### Agent Note Types
+
+| Emoji | Type | When to Use |
+|-------|------|-------------|
+| 📝 | **Reasoning** | Explaining why I made a choice |
+| ⚠️ | **Uncertainty** | I'm not confident about this |
+| 🤔 | **Decision point** | You need to make a call here |
+| 💡 | **Suggestion** | Optional improvement idea |
+| 📚 | **Citation note** | Verify this reference |
+| ✂️ | **Cuts available** | This could be shortened |
+| 🔗 | **Connection** | Links to another section/paper |
+
+### Why Agent Notes?
+
+1. **Transparency** — You see our reasoning, not just output
+2. **Calibration** — We flag our own uncertainty
+3. **Collaboration** — Feels like a coauthor, not a black box
+4. **Learning** — You can correct us and we improve
+
+### Stripping Notes for Final
+
+Before submission, run:
+```
+/commscribe strip-notes
+
+→ Removes all agent notes
+→ Flags any unresolved [VERIFY] or [??] tags
+→ Produces clean output
+```
+
+---
+
 ## The 4-Stage Workflow
 
 | Stage | You Have | You Want | Entry |
