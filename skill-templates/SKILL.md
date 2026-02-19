@@ -1,27 +1,25 @@
 ---
 name: commscribe
-description: Scholarly authenticity framework — protects your voice, not a shortcut
+description: Unblock your scholarship — helps with writer's block while keeping your voice central
 metadata:
   version: 0.1.0
   author: Wayne Xu / LampBotics AI Lab
   sister_project: commDAAF
 ---
 
-# CommScribe — Scholarly Authenticity Framework
+# CommScribe — Unblock Your Scholarship
 
-**Version 0.1.0** — The Anti-AI AI
+**Version 0.1.0**
 
-*Helps you NOT sound like you used AI.*
+*Your ideas. Your voice. We just help you get unstuck.*
 
-**This is NOT:**
-- A shortcut to academic writing
-- An AI ghostwriter
-- A replacement for thinking
+**The problem:** Writer's block, literature overwhelm, revision paralysis — the friction that stops scholars from doing their best work.
 
-**This IS:**
-- Voice preservation at scale
-- Busywork automation (so you can THINK)
-- Authenticity protection (286 anti-AI patterns blocked)
+**The solution:** A thinking partner that:
+- Helps you push through mental blocks
+- Handles tedious busywork (lit search, organization)
+- Keeps YOUR voice at the center, always
+- Learns YOUR style, not generic academic-ese
 
 ---
 

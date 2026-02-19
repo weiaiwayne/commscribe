@@ -1,8 +1,8 @@
 # CommScribe
 
-**Scholarly Authenticity Framework** | v0.1.0
+**Unblock Your Scholarship** | v0.1.0
 
-*The Anti-AI AI — helps you NOT sound like you used AI.*
+*Your ideas. Your voice. We just help you get unstuck.*
 
 **Sister project to [CommDAAF](https://github.com/weiaiwayne/commDAAF)** — while CommDAAF handles data analysis, CommScribe handles literature review, theory building, and scholarly writing.
 
@@ -14,57 +14,50 @@ This framework is under active development at the [LampBotics AI Lab](https://la
 
 ---
 
-## What This Is NOT
+## The Problem: Getting Stuck
 
-❌ A shortcut to academic writing  
-❌ An AI ghostwriter  
-❌ A way to "generate" scholarship  
-❌ A replacement for thinking  
+Every academic knows the feeling:
 
-**You can write. CommScribe isn't here because you can't.**
+- **The blank page** — you know what you want to say, but can't start
+- **Literature overwhelm** — drowning in papers, can't see the synthesis
+- **The muddy middle** — draft exists, but it's not *clicking*
+- **Voice fatigue** — after hours of writing, you don't sound like yourself anymore
+- **Revision paralysis** — something's wrong, but you can't see it
 
----
-
-## The Real Problem
-
-Scholars face a paradox:
-
-1. **Literature review is tedious busywork** — hours of searching, organizing, synthesizing that could be spent *thinking*
-2. **Time pressure produces generic prose** — when exhausted, everyone sounds the same
-3. **AI tools make it worse** — they make it *too easy* to sound like generic academic-ese
-4. **Your voice drifts** — across papers, under deadlines, your distinctive style erodes
-
-The result? Work that sounds like it could have been written by anyone. Or worse — sounds like it was written by ChatGPT.
+These aren't signs you can't write. They're signs you're human.
 
 ---
 
-## What CommScribe Actually Does
+## What CommScribe Does
 
-**Protects your scholarly identity.**
+**Helps you get unstuck — while keeping YOUR voice at the center.**
 
-| Problem | CommScribe Solution |
-|---------|---------------------|
-| Tedious lit review | Automates search & organization, frees you to *think* |
-| Voice drift | Learns YOUR style, enforces it in every draft |
-| AI-sounding prose | Actively blocks 286 patterns that signal AI generation |
-| Generic writing | Matches YOUR sentence rhythms, hedging style, transitions |
-| Citation chaos | Integrates with YOUR Zotero, maintains YOUR density |
+| When You're Stuck On... | CommScribe Helps By... |
+|-------------------------|------------------------|
+| Starting | Structured concept validation gets ideas flowing |
+| Literature | Searches, organizes, synthesizes — you focus on meaning |
+| Drafting | Learns YOUR voice, offers scaffolding in YOUR style |
+| Revising | Independent audit spots what you can't see anymore |
+| Consistency | Maintains your voice even when you're exhausted |
 
-**The goal:** Text that sounds exactly like you wrote it — because the ideas ARE yours, and now the prose is too.
+**The ideas are yours. The arguments are yours. The voice is yours.**
+
+We just handle the friction that gets in the way.
 
 ---
 
-## The Anti-AI Principle
+## Your Voice at the Center
 
-Here's the irony: CommScribe uses AI to help you *not sound like AI*.
+Most AI writing tools have a voice problem: they make everyone sound the same.
 
-Most AI writing tools optimize for fluency. CommScribe optimizes for **authenticity**:
-- Learns what makes YOUR writing distinctive
-- Flags and blocks generic AI patterns
-- Matches your voice profile, not "academic writing" in general
-- Provides independent audit to catch drift
+CommScribe flips this:
 
-If someone can tell you used AI, CommScribe failed.
+1. **Learns YOUR writing style** — from your own papers, your own words
+2. **Generates in YOUR voice** — not "academic writing," YOUR academic writing
+3. **Blocks generic patterns** — 286 AI-typical phrases that would dilute your voice
+4. **Adapts with feedback** — tell it "that sounds like me" or "that doesn't," it learns
+
+The result: drafts that sound like you wrote them on a good day — because they're built on YOUR patterns, not generic ones.
 
 ---
 

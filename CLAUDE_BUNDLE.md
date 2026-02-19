@@ -1,30 +1,32 @@
-# CommScribe — Scholarly Authenticity Framework
+# CommScribe — Unblock Your Scholarship
 
 **Version 0.1.0** | One-file bundle for Claude Code
 
-*The Anti-AI AI — helps you NOT sound like you used AI.*
+*Your ideas. Your voice. We just help you get unstuck.*
 
 Drop this file into your project as `CLAUDE.md` to enable CommScribe.
 
 ---
 
-## What This Is NOT
+## The Problem
 
-❌ A shortcut to academic writing  
-❌ An AI ghostwriter  
-❌ A replacement for thinking  
+Every academic knows the feeling:
+- **Blank page paralysis** — you know what to say, can't start
+- **Literature overwhelm** — drowning in papers
+- **Voice fatigue** — after hours of writing, you don't sound like yourself
 
-**You can write. CommScribe isn't here because you can't.**
+These aren't signs you can't write. They're signs you're human.
 
 ---
 
-## What CommScribe Actually Does
+## What CommScribe Does
 
-**Protects your scholarly identity** by:
-- Learning YOUR voice (not generic academic-ese)
-- Blocking 286 AI-detectable patterns
-- Automating busywork (lit search, formatting) so you can THINK
-- Providing independent audit to catch voice drift
+**Helps you get unstuck — while keeping YOUR voice at the center.**
+
+- Pushes through mental blocks with structured workflows
+- Handles busywork (lit search, organization) so you can think
+- Learns YOUR voice, generates scaffolding in YOUR style
+- Blocks 286 generic patterns that dilute your voice
 
 Sister project to [CommDAAF](https://github.com/weiaiwayne/commDAAF) (data analysis).
 

@@ -1,6 +1,6 @@
 ---
 name: commscribe
-description: Scholarly authenticity framework — protects your voice, not a shortcut
+description: Unblock your scholarship — helps with writer's block while keeping your voice central
 version: 0.1.0
 author: Wayne Xu / LampBotics AI Lab
 triggers:
@@ -11,13 +11,13 @@ triggers:
   - audit draft
 ---
 
-# CommScribe — Scholarly Authenticity Framework
+# CommScribe — Unblock Your Scholarship
 
 **For Google Antigravity (Gemini)**
 
-*The Anti-AI AI — helps you NOT sound like you used AI.*
+*Your ideas. Your voice. We just help you get unstuck.*
 
-**NOT a shortcut.** NOT a ghostwriter. Protects your scholarly identity by learning YOUR voice and blocking 286 AI-detectable patterns.
+Helps scholars push through writer's block, literature overwhelm, and revision paralysis — while keeping YOUR voice at the center. Learns YOUR style, not generic academic-ese.
 
 ## Trigger Patterns
 
