@@ -189,7 +189,7 @@ manager.feedback("wayne", generated_text, sounds_like_me=True)
 | `.pdf` | ✅ | Extracts text (not scanned images) |
 | `.rtf` | ✅ | Rich text, strips formatting |
 
-**Word comments supported!**
+**Word comments & track changes supported!**
 
 If you add comments in Word (Review → New Comment), the agent reads them:
 
@@ -198,12 +198,35 @@ If you add comments in Word (Review → New Comment), the agent reads them:
 
 **[Comment by Wayne]:** This transition feels weak, help me fix it
   ↳ *On text:* "Furthermore, the implications..."
-
-**[Comment by Wayne]:** Not sure about this citation
-  ↳ *On text:* "Smith (2019) argues..."
 ```
 
-This lets you annotate your document directly in Word instead of writing separate instructions.
+If you have Track Changes enabled, the agent sees those too:
+
+```markdown
+## 📝 TRACK CHANGES IN DOCUMENT
+
+**[+Wayne]:** ++networked gatekeeping theory++
+**[-Wayne]:** ~~traditional gatekeeping~~
+```
+
+### Agent Output with Track Changes
+
+When the agent edits, it shows changes in a similar format:
+
+```markdown
+~~Furthermore, the implications are significant.~~
+→ ++This reframing of gatekeeping as a networked process shifts our understanding...++
+```
+
+**To get a proper .docx with Track Changes:**
+```
+/download --track-changes
+```
+
+This generates a Word file where edits appear as tracked changes you can accept/reject in Word.
+
+📝 *Agent note: Track changes export uses python-redlines. 
+If not installed, you'll get a clean doc with changes already applied.*
 
 ```
 📝 Agent nudge: Drop your files or paste text directly.

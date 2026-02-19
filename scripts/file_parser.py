@@ -36,16 +36,26 @@ def parse_txt(filepath: str) -> str:
 
 
 def parse_docx(filepath: str) -> str:
-    """Parse Word 2007+ (.docx) file, including comments."""
+    """Parse Word 2007+ (.docx) file, including comments and track changes."""
     try:
         from docx import Document
         doc = Document(filepath)
         paragraphs = [p.text for p in doc.paragraphs if p.text.strip()]
         main_text = '\n\n'.join(paragraphs)
         
+        # Extract track changes
+        track_changes = extract_docx_track_changes(filepath)
+        if track_changes:
+            main_text += "\n\n---\n## 📝 TRACK CHANGES IN DOCUMENT\n\n"
+            for change in track_changes:
+                if change['type'] == 'insertion':
+                    main_text += f"**[+{change['author']}]:** ++{change['text']}++\n"
+                else:
+                    main_text += f"**[-{change['author']}]:** ~~{change['text']}~~\n"
+            main_text += "\n"
+        
         # Extract comments from XML
         comments = extract_docx_comments(filepath)
-        
         if comments:
             main_text += "\n\n---\n## 💬 USER COMMENTS FROM DOCUMENT\n\n"
             for comment in comments:
@@ -103,6 +113,75 @@ def extract_docx_comments(filepath: str) -> List[dict]:
         pass
     
     return comments
+
+
+def extract_docx_track_changes(filepath: str) -> List[dict]:
+    """Extract track changes (insertions/deletions) from a .docx file."""
+    import zipfile
+    from xml.etree import ElementTree as ET
+    
+    changes = []
+    
+    try:
+        with zipfile.ZipFile(filepath, 'r') as zf:
+            with zf.open('word/document.xml') as f:
+                tree = ET.parse(f)
+                root = tree.getroot()
+            
+            ns = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
+            
+            # Find insertions (w:ins)
+            for ins in root.findall('.//w:ins', ns):
+                author = ins.get('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}author', 'Unknown')
+                text_parts = []
+                for t in ins.findall('.//w:t', ns):
+                    if t.text:
+                        text_parts.append(t.text)
+                if text_parts:
+                    changes.append({
+                        'type': 'insertion',
+                        'author': author,
+                        'text': ''.join(text_parts)
+                    })
+            
+            # Find deletions (w:del)
+            for dele in root.findall('.//w:del', ns):
+                author = dele.get('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}author', 'Unknown')
+                text_parts = []
+                for t in dele.findall('.//w:delText', ns):
+                    if t.text:
+                        text_parts.append(t.text)
+                if text_parts:
+                    changes.append({
+                        'type': 'deletion',
+                        'author': author,
+                        'text': ''.join(text_parts)
+                    })
+    except Exception:
+        pass
+    
+    return changes
+
+
+def parse_docx_full(filepath: str) -> dict:
+    """
+    Parse .docx with full metadata: text, comments, and track changes.
+    
+    Returns dict with:
+    - text: main document text
+    - comments: list of comments
+    - track_changes: list of insertions/deletions
+    """
+    from docx import Document
+    
+    doc = Document(filepath)
+    paragraphs = [p.text for p in doc.paragraphs if p.text.strip()]
+    
+    return {
+        'text': '\n\n'.join(paragraphs),
+        'comments': extract_docx_comments(filepath),
+        'track_changes': extract_docx_track_changes(filepath)
+    }
 
 
 def parse_doc(filepath: str) -> str:
