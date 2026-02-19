@@ -239,15 +239,60 @@ sessions_spawn:
 
 ## Citation Integrity
 
+### The Honesty Principle
+
+**AI agents hallucinate citations.** We don't pretend otherwise.
+
+Every citation in CommScribe output comes with an honesty nudge:
+
+```markdown
+Smith (2020) argues that gatekeeping has evolved in digital spaces.
+
+📚 *Agent note: I believe this is from "Networked Gatekeeping" — 
+but I could be wrong. Please verify before citing.*
+```
+
+### Citation Confidence Levels
+
+| Level | Marker | Meaning |
+|-------|--------|---------|
+| ✅ **Zotero-verified** | [Z] | Exists in your Zotero library |
+| 🟡 **Likely correct** | [?] | Common citation, probably real |
+| 🔴 **Uncertain** | [??] | Check this one carefully |
+| ⚠️ **Reconstructed** | [R] | I know the idea exists but may have wrong author/year |
+
+### Example Output
+
+```markdown
+## Theoretical Framework
+
+Gatekeeping theory has evolved from Lewin's (1947) original formulation 
+[Z: in your library] to networked gatekeeping (Barzilai-Nahon, 2008) 
+[?? Agent note: I'm fairly confident this is the right cite, but 
+please double-check the year — it might be 2009].
+
+The concept of "network gatekeeping salience" [R: I know this concept 
+exists in the literature but I'm reconstructing the citation — you'll 
+need to find the actual source] suggests that...
+```
+
+### Zotero Integration
+
+If connected to user's Zotero:
+1. Check if cited work exists in library
+2. Mark with [Z] if verified
+3. Suggest similar papers from library if uncertain
+4. Flag citations that don't match any library item
+
 ### [VERIFY] Tag System
 
-When uncertain about a citation:
+For structural uncertainties (not just citation accuracy):
 ```
 Smith (2020) argues that gatekeeping has evolved [VERIFY: exact page number needed]
 ```
 
-**Draft tier:** [VERIFY] tags allowed
-**Publication tier:** All [VERIFY] tags must be resolved
+**Draft tier:** [VERIFY] tags and confidence markers allowed  
+**Publication tier:** All tags must be resolved, all citations verified
 
 ### Citation Density Matching
 
@@ -255,6 +300,11 @@ Voice profile includes citation density:
 - Extract from user's samples
 - Match in generated text
 - Flag if significantly different
+
+### The Bottom Line
+
+We'd rather say "I might be wrong" than confidently cite something fake. 
+Your credibility matters more than our appearance of competence.
 
 ---
 
