@@ -1,0 +1,57 @@
+{
+  "user_id": "example_academic",
+  "extracted_at": "2026-02-19T14:30:00",
+  "sample_count": 8,
+  "total_words": 12450,
+  
+  "type_token_ratio": 0.42,
+  "avg_word_length": 5.3,
+  "vocabulary_richness": 0.38,
+  "function_word_dist": {
+    "the": 0.065,
+    "of": 0.038,
+    "and": 0.032,
+    "to": 0.028,
+    "in": 0.025,
+    "that": 0.022,
+    "is": 0.018,
+    "for": 0.015,
+    "this": 0.014,
+    "we": 0.012,
+    "as": 0.011,
+    "with": 0.010,
+    "are": 0.009,
+    "by": 0.008,
+    "on": 0.007,
+    "be": 0.006,
+    "which": 0.006,
+    "from": 0.005,
+    "or": 0.005,
+    "have": 0.004
+  },
+  "content_word_preferences": [
+    "media", "social", "communication", "platform", "digital",
+    "information", "research", "political", "public", "online",
+    "network", "content", "data", "analysis", "discourse"
+  ],
+  
+  "avg_sentence_length": 22.5,
+  "sentence_length_std": 8.3,
+  "sentence_length_range": [8, 42],
+  "passive_voice_ratio": 0.18,
+  "question_frequency": 0.025,
+  
+  "hedge_frequency": 1.2,
+  "hedge_types": ["suggests", "indicates", "appears", "may", "likely"],
+  "transition_frequency": 0.85,
+  "preferred_transitions": ["however", "yet", "while", "although", "nevertheless"],
+  "paragraph_length_avg": 165,
+  "paragraph_length_std": 48,
+  
+  "citation_density": 2.3,
+  "first_person_usage": 1.45,
+  
+  "style_description": "Writing style characterized by moderately complex sentences (22.5 words avg) with high variation (±8.3 words). Uses balanced active/passive voice (18% passive) with moderate hedging. Features rich vocabulary (TTR: 0.42) and strong authorial presence (frequent I/we).",
+  
+  "generation_constraints": "VOICE CONSTRAINTS:\n1. Sentence length: Target 22 words (±8), vary between 14-30\n2. Paragraph length: Approximately 165 words per paragraph\n3. Passive voice: Use in approximately 18% of sentences\n4. Hedging: Use hedges like 'suggests, indicates, appears' approximately every 8 sentences\n5. Transitions: Prefer 'however, yet, while, although' over generic 'furthermore, moreover, additionally'\n6. Avoid: 'It is important to note', 'In recent years', 'This paper explores'\n7. DO NOT use numbered lists or bullet points unless the user's samples contain them\n8. Mirror the level of formality and directness from the samples"
+}

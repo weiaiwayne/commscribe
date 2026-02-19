@@ -415,13 +415,20 @@ class VoicePromptGenerator:
         
         # Import anti-AI patterns
         try:
-            from anti_ai_patterns import generate_avoidance_prompt
+            # Try relative import first (when used as package)
+            from .anti_ai_patterns import generate_avoidance_prompt
             self.anti_ai_prompt = generate_avoidance_prompt(include_examples=True, compact=False)
             self.anti_ai_compact = generate_avoidance_prompt(compact=True)
         except ImportError:
-            # Fallback if module not found
-            self.anti_ai_prompt = self._fallback_anti_ai_prompt()
-            self.anti_ai_compact = self.anti_ai_prompt
+            try:
+                # Try direct import (when run standalone)
+                from anti_ai_patterns import generate_avoidance_prompt
+                self.anti_ai_prompt = generate_avoidance_prompt(include_examples=True, compact=False)
+                self.anti_ai_compact = generate_avoidance_prompt(compact=True)
+            except ImportError:
+                # Fallback if module not found
+                self.anti_ai_prompt = self._fallback_anti_ai_prompt()
+                self.anti_ai_compact = self.anti_ai_prompt
     
     def _fallback_anti_ai_prompt(self) -> str:
         """Fallback anti-AI instructions if module not available"""
