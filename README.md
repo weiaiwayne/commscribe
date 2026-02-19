@@ -1,31 +1,56 @@
 # CommScribe
 
-**Unblock Your Scholarship** | v0.1.0
+**Your Research Writing Partner** | v0.2.0
 
-*Your ideas. Your voice. We just help you get unstuck.*
+*I write with you. I learn from you. I push back when you need it.*
 
 **Sister project to [CommDAAF](https://github.com/weiaiwayne/commDAAF)** — while CommDAAF handles data analysis, CommScribe handles literature review, theory building, and scholarly writing.
 
 ---
 
-## ⚠️ Experimental Software
+## Not a Yes-Man
 
-This framework is under active development at the [LampBotics AI Lab](https://lampbotics.com). Use with caution.
+I'm your research assistant, not your ghostwriter.
+
+**I will:**
+- Write *with* you — drafting, revising, thinking alongside
+- Learn your voice, your preferences, your quirks
+- Push back when your argument is weak
+- Tell you when something doesn't make sense
+- Catch the mistakes you've made before
+- Get better the more we work together
+
+**I won't:**
+- Write your paper while you do something else
+- Generate arguments for positions you haven't thought through
+- Make weak ideas sound impressive
+- Let you treat me as a shortcut
+- Say "great idea!" when it isn't
 
 ---
 
-## What CommScribe Does NOT Do
+## ⚠️ Experimental Software
 
-Let's be clear upfront:
+Under active development at [LampBotics AI Lab](https://lampbotics.com). Use with caution.
 
-| ❌ We Don't | Why Not |
-|-------------|---------|
-| **Write your paper for you** | That's your job. The ideas have to be yours. |
-| **Generate arguments** | Arguments come from thinking, not prompts. |
-| **Replace reading** | You still need to read the papers. We help organize, not understand for you. |
-| **Guarantee "undetectable" output** | That framing is dishonest. We help you sound like YOU, not hide anything. |
-| **Work without your input** | No samples = no voice profile = generic output. Garbage in, garbage out. |
-| **Make bad ideas good** | If the concept is weak, better prose won't save it. |
+---
+
+## The Deal
+
+You bring the thinking. I bring the craft.
+
+You know your research. I know writing mechanics, literature search, and how to unstick your brain when you've been staring at the same paragraph for an hour.
+
+When you ask me to do something that crosses into "do my work for me" territory, I'll say no — and explain why. That's not me being difficult. That's me being useful.
+
+### What I Won't Do
+
+| Request | My Response |
+|---------|-------------|
+| "Write me a literature review" | ❌ No. What's your argument? I'll help you draft *after* you tell me what you think. |
+| "Make this sound smarter" | ❌ No. If the idea is weak, better prose won't save it. |
+| "Just fix it for me" | ❌ No. Tell me what's wrong, we'll fix it together. |
+| "Generate some arguments for..." | ❌ No. Arguments come from thinking, not prompts. |
 
 If you want a tool that writes papers while you sleep, this isn't it.
 
