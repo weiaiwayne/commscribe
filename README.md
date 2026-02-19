@@ -48,12 +48,25 @@ CommScribe shares DNA with:
 
 ### 🎤 Voice Learning
 
-Extract your writing style from 5-10 samples:
+**Two modes available:**
+
+#### Statistical Mode (Traditional)
 - Sentence length patterns
 - Vocabulary richness
 - Hedging preferences ("suggests" vs "proves")
 - Transition usage
 - Citation integration style
+
+#### Adaptive Mode (AI-Native) ⭐ NEW
+- **Embedding-based** — captures the gestalt, not just word counts
+- **Continuous learning** — improves with each "sounds like me" / "doesn't" feedback
+- **Contrastive** — learns what your voice is NOT (vs AI, vs generic academic)
+- **Calibrating threshold** — adapts to YOUR preferences over time
+
+```python
+# Adaptive voice improves with use
+manager.feedback("wayne", generated_text, sounds_like_me=True)
+```
 
 Generated text matches YOUR voice, not generic academic-ese.
 
@@ -161,8 +174,9 @@ commscribe/
 │   │   ├── drafting.md
 │   │   └── audit.md
 │   ├── voice/                 # Voice learning
-│   │   ├── extraction.md
-│   │   ├── prompting.md
+│   │   ├── extraction.md      # Statistical extraction
+│   │   ├── prompting.md       # Voice-constrained prompts
+│   │   ├── adaptive.md        # AI-native learning ⭐ NEW
 │   │   └── profiles/
 │   ├── anti-ai/               # Pattern avoidance
 │   │   ├── patterns.md
@@ -172,9 +186,10 @@ commscribe/
 │       ├── nudge-system.md
 │       └── reflection-checkpoints.md
 ├── scripts/
-│   ├── voice_learning.py
+│   ├── voice_learning.py      # Statistical voice extraction
+│   ├── adaptive_voice.py      # AI-native voice learning ⭐ NEW
 │   ├── anti_ai_patterns.py
-│   └── style_extractor.py
+│   └── enhanced_pipeline_guardrails.py
 └── antigravity/               # Google Antigravity version
 ```
 

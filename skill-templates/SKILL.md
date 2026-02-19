@@ -60,17 +60,34 @@ Activate this skill when user requests involve:
 
 ### Stage 2.5: Voice Learning (Optional but Recommended)
 
-**Extract voice profile from user's writing:**
+**Two modes available:**
+
+#### Statistical Mode (Traditional)
 - Sentence length patterns
-- Vocabulary richness
+- Vocabulary richness (TTR)
 - Hedging preferences
 - Transition usage
 - Citation integration style
 
+#### Adaptive Mode (AI-Native) ⭐ NEW
+- **Embedding-based** — captures holistic feel, not just word counts
+- **Continuous learning** — improves with each feedback
+- **Contrastive** — learns what your voice is NOT (vs AI, vs generic academic)
+- **Feedback-driven** — "sounds like me" / "doesn't" calibrates the model
+
+```python
+# Adaptive voice learns and improves
+manager.setup_voice("wayne", samples, 
+    contrast_samples={"ai_generated": ai_texts})
+
+# Later: feedback refines it
+manager.feedback("wayne", generated_text, sounds_like_me=True)
+```
+
 **Sample Requirements:**
 - 5-10 samples
 - 500+ words each
-- User's own writing
+- User's own writing (solo-authored preferred)
 
 ### Stage 3: Drafting (Voice-Constrained)
 
@@ -189,8 +206,9 @@ sessions_spawn:
 - `stages/audit.md` — Independent critical review
 
 ### Voice Learning
-- `voice/extraction.md` — Extract style from samples
+- `voice/extraction.md` — Extract style from samples (statistical)
 - `voice/prompting.md` — Voice-constrained prompts
+- `voice/adaptive.md` — AI-native voice learning with feedback ⭐ NEW
 - `voice/profiles/` — Stored user profiles
 
 ### Anti-AI
