@@ -124,10 +124,27 @@ Before submission, run:
 
 ### Stage 2: Literature Synthesis
 
-**Search Methods:**
-- Two-stage retrieval (keyword → semantic rerank)
-- Three-path retrieval (keyword + embedding + domain)
-- Hybrid search (Zotero KG + OpenAlex API)
+**Default: Zotero-first search**
+Start with user's existing library. Often sufficient.
+
+**Expanded search (optional):**
+```
+📚 Agent nudge: Your Zotero has 12 papers on this topic. 
+Want me to expand the search?
+
+Options:
+1. No, use my library only (faster, papers I trust)
+2. Yes, search OpenAlex for recent work (adds ~50 candidates)
+3. Yes, full semantic search (slower, most comprehensive)
+
+Your choice? ___
+```
+
+| Mode | Sources | Speed | When to Use |
+|------|---------|-------|-------------|
+| **Library only** | Zotero | Fast | You know the lit well |
+| **+ OpenAlex** | Zotero + OpenAlex API | Medium | Need recent papers |
+| **+ Semantic** | Above + embedding search | Slow | New area, comprehensive review |
 
 **Output:** Integrated literature notes with citations.
 
