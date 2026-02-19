@@ -173,6 +173,79 @@ Before submission, run:
 
 ---
 
+## Findings-Aware Mode
+
+Share your preliminary results — I'll use them to strengthen your lit review and intro.
+
+### Why This Matters
+
+Most writing happens after you already know what you found. But:
+- Lit reviews get written before results are final
+- Intros need to set up findings without spoiling them
+- Theoretical framing should connect to what you actually found
+
+**When you share your findings, I can:**
+- Check if your lit review sets up what you found
+- Spot missing literature that connects to your results
+- Flag when your intro promises something your data doesn't deliver
+- Suggest theoretical angles that fit your actual findings
+
+### How to Share Findings
+
+```
+User: Here are my preliminary findings:
+- Hashtag coordination strongest predictor of engagement (δ=0.40)
+- Sentiment was NOT significant (contradicting prior lit)
+- Cuban state media unexpectedly prominent in network
+- 70% of activity from accounts created during crisis
+
+Now help me revise my lit review with this in mind.
+```
+
+**Agent response:**
+```markdown
+📊 Got it. Looking at your lit review with these findings in mind:
+
+⚠️ **Gap spotted:** You cite Smith (2020) on sentiment driving engagement,
+but your data contradicts this. Options:
+1. Cut Smith — it's now a distraction
+2. Keep Smith to set up the contradiction (stronger argument)
+3. Find lit that already questions sentiment effects
+
+💡 **Missing connection:** Your Cuban state media finding is fascinating,
+but your lit review has no state actor literature. Consider adding:
+- Bradshaw & Howard (2019) on state-sponsored trolls
+- Starbird et al. (2019) on information operations
+
+🔗 **Good alignment:** Your coordination focus is well set up by 
+the Barzilai-Nahon framing. Keep that.
+
+📝 Agent note: Want me to search for literature on state media 
+amplification in crisis contexts? That seems like a gap.
+```
+
+### Findings Intake
+
+When you share findings, I'll store them for the session:
+
+```
+project/
+├── FINDINGS.md           # Your preliminary results
+├── findings_lit_gaps.md  # Literature gaps I identified
+└── findings_alignment.md # How well current draft aligns
+```
+
+### Commands
+
+| Command | Action |
+|---------|--------|
+| `/findings` | Show stored findings |
+| `/findings add [text]` | Add more findings |
+| `/findings clear` | Clear stored findings |
+| `/check-alignment` | Compare draft against findings |
+
+---
+
 ## The 4-Stage Workflow
 
 | Stage | You Have | You Want | Entry |
