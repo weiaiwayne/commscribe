@@ -1,6 +1,6 @@
 ---
 name: commscribe
-description: Literature review & theorization framework with voice learning
+description: Scholarly authenticity framework — protects your voice, not a shortcut
 version: 0.1.0
 author: Wayne Xu / LampBotics AI Lab
 triggers:
@@ -11,11 +11,13 @@ triggers:
   - audit draft
 ---
 
-# CommScribe — Literature Review & Theorization Framework
+# CommScribe — Scholarly Authenticity Framework
 
 **For Google Antigravity (Gemini)**
 
-An agent skill for academic writing and literature synthesis. Writes in YOUR voice, avoids AI patterns.
+*The Anti-AI AI — helps you NOT sound like you used AI.*
+
+**NOT a shortcut.** NOT a ghostwriter. Protects your scholarly identity by learning YOUR voice and blocking 286 AI-detectable patterns.
 
 ## Trigger Patterns
 

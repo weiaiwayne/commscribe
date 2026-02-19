@@ -1,17 +1,27 @@
 ---
 name: commscribe
-description: Literature review & theorization framework with voice learning and anti-AI awareness
+description: Scholarly authenticity framework — protects your voice, not a shortcut
 metadata:
   version: 0.1.0
   author: Wayne Xu / LampBotics AI Lab
   sister_project: commDAAF
 ---
 
-# CommScribe — Literature Review & Theorization Framework
+# CommScribe — Scholarly Authenticity Framework
 
-**Version 0.1.0** — Voice learning, anti-AI patterns, 4-stage workflow.
+**Version 0.1.0** — The Anti-AI AI
 
-An OpenClaw skill package for academic writing and literature synthesis.
+*Helps you NOT sound like you used AI.*
+
+**This is NOT:**
+- A shortcut to academic writing
+- An AI ghostwriter
+- A replacement for thinking
+
+**This IS:**
+- Voice preservation at scale
+- Busywork automation (so you can THINK)
+- Authenticity protection (286 anti-AI patterns blocked)
 
 ---
 

@@ -1,8 +1,8 @@
 # CommScribe
 
-**Literature Review & Theorization Framework** | v0.1.0
+**Scholarly Authenticity Framework** | v0.1.0
 
-A methodological skill pack for AI-assisted academic writing and literature synthesis, designed for communication scholars and computational social scientists.
+*The Anti-AI AI — helps you NOT sound like you used AI.*
 
 **Sister project to [CommDAAF](https://github.com/weiaiwayne/commDAAF)** — while CommDAAF handles data analysis, CommScribe handles literature review, theory building, and scholarly writing.
 
@@ -14,17 +14,61 @@ This framework is under active development at the [LampBotics AI Lab](https://la
 
 ---
 
-## What Is This?
+## What This Is NOT
 
-CommScribe is a set of structured instructions ("skills") that help AI assistants support academic literature review and writing. Rather than generating generic AI text, CommScribe enforces:
+❌ A shortcut to academic writing  
+❌ An AI ghostwriter  
+❌ A way to "generate" scholarship  
+❌ A replacement for thinking  
 
-- **Voice learning** — Writes in YOUR voice, not generic AI-speak
-- **Anti-AI awareness** — Actively avoids 286 patterns that signal AI generation
-- **Staged workflow** — Concept → Synthesis → Drafting → Audit
-- **Conscious theorization** — Forces explicit theory selection with justification
-- **Citation integrity** — [VERIFY] tags, Zotero integration, citation density matching
+**You can write. CommScribe isn't here because you can't.**
 
-The goal is not to write papers for you, but to create a collaborator that produces text indistinguishable from your own writing.
+---
+
+## The Real Problem
+
+Scholars face a paradox:
+
+1. **Literature review is tedious busywork** — hours of searching, organizing, synthesizing that could be spent *thinking*
+2. **Time pressure produces generic prose** — when exhausted, everyone sounds the same
+3. **AI tools make it worse** — they make it *too easy* to sound like generic academic-ese
+4. **Your voice drifts** — across papers, under deadlines, your distinctive style erodes
+
+The result? Work that sounds like it could have been written by anyone. Or worse — sounds like it was written by ChatGPT.
+
+---
+
+## What CommScribe Actually Does
+
+**Protects your scholarly identity.**
+
+| Problem | CommScribe Solution |
+|---------|---------------------|
+| Tedious lit review | Automates search & organization, frees you to *think* |
+| Voice drift | Learns YOUR style, enforces it in every draft |
+| AI-sounding prose | Actively blocks 286 patterns that signal AI generation |
+| Generic writing | Matches YOUR sentence rhythms, hedging style, transitions |
+| Citation chaos | Integrates with YOUR Zotero, maintains YOUR density |
+
+**The goal:** Text that sounds exactly like you wrote it — because the ideas ARE yours, and now the prose is too.
+
+---
+
+## The Anti-AI Principle
+
+Here's the irony: CommScribe uses AI to help you *not sound like AI*.
+
+Most AI writing tools optimize for fluency. CommScribe optimizes for **authenticity**:
+- Learns what makes YOUR writing distinctive
+- Flags and blocks generic AI patterns
+- Matches your voice profile, not "academic writing" in general
+- Provides independent audit to catch drift
+
+If someone can tell you used AI, CommScribe failed.
+
+---
+
+## Core Features
 
 ---
 
@@ -43,8 +87,6 @@ CommScribe shares DNA with:
 | Post-API data strategies | Voice learning |
 
 ---
-
-## Key Features
 
 ### 🎤 Voice Learning
 
