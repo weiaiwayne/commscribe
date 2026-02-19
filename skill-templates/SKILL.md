@@ -240,9 +240,107 @@ Or just press Enter to continue without notes.
 - Avoid AI patterns (286 banned phrases)
 
 **Multi-draft support:**
-- Up to 5 iterations
-- Agent comments on each
-- Version history preserved
+- Unlimited iterations (practical limit ~10 before context overflow)
+- Agent comments on each version
+- Full version history preserved
+
+---
+
+## Iterative Revision Workflow
+
+Writing is back-and-forth. Here's how it works:
+
+### Round 1: User → Agent
+```
+User: [uploads draft.docx]
+💬 "Help me strengthen the theoretical framing. 
+    The lit review feels disconnected from my RQ."
+```
+
+### Round 1: Agent → User
+```markdown
+## Your draft with my edits
+
+[Original text with tracked changes]
+
+📝 Agent note: I restructured paragraphs 2-3 to connect 
+Barzilai-Nahon directly to your RQ. See if this works.
+
+⚠️ Agent note: Your transition on p.4 is abrupt. 
+I offered two options — pick the one that fits your voice.
+
+🤔 Agent note: I'm not sure what you mean by "platform affordances" 
+here. Did you mean technical features or social norms? 
+I need you to clarify before I can edit this section.
+
+💬 **Questions for you:**
+1. Option A or B for the transition?
+2. Clarify "platform affordances"?
+3. Keep the Castells cite or cut it?
+```
+
+### Round 2: User → Agent
+```
+User: [uploads revised_draft_v2.docx]
+💬 "Option A for transition. By affordances I mean technical 
+    features. Cut Castells — it's tangential. Also, can you 
+    make the methods section less passive?"
+```
+
+### Round 2: Agent → User
+```markdown
+## Version 2 with my edits
+
+[Updated text]
+
+✅ Applied Option A transition
+✅ Clarified affordances as technical features
+✅ Removed Castells reference
+📝 Agent note: Revised methods to active voice. 
+   Changed "Data were collected" → "We collected data"
+   Let me know if that's too informal for your target journal.
+
+💬 **Ready for another pass, or move to audit?**
+```
+
+### Tracking State
+
+Each revision cycle preserves:
+```
+project/
+├── drafts/
+│   ├── v1_original.docx
+│   ├── v1_agent_response.md
+│   ├── v2_user_revision.docx
+│   ├── v2_agent_response.md
+│   └── ...
+├── REVISION_LOG.md        # Summary of all changes
+└── DECISIONS.md           # User choices recorded
+```
+
+### Commands
+
+| Command | Action |
+|---------|--------|
+| `/revise` | Upload new version with notes |
+| `/continue` | Agent continues from last state |
+| `/diff` | Show changes between versions |
+| `/decisions` | Review all choices made |
+| `/restart` | Start fresh (preserves history) |
+
+### Agent Behavior
+
+**Always:**
+- Show tracked changes (insertions/deletions)
+- Explain reasoning for edits
+- Ask clarifying questions before guessing
+- Offer options when multiple approaches exist
+- Record user decisions for consistency
+
+**Never:**
+- Make silent changes
+- Override user's explicit preferences
+- Assume what user means when ambiguous
 
 ### Stage 4: Independent Audit
 
