@@ -26,6 +26,7 @@ class ParsedDocument:
     word_count: int
     success: bool
     error: Optional[str] = None
+    comments: Optional[List[dict]] = None  # Word comments if present
 
 
 def parse_txt(filepath: str) -> str:
@@ -35,17 +36,73 @@ def parse_txt(filepath: str) -> str:
 
 
 def parse_docx(filepath: str) -> str:
-    """Parse Word 2007+ (.docx) file."""
+    """Parse Word 2007+ (.docx) file, including comments."""
     try:
         from docx import Document
         doc = Document(filepath)
         paragraphs = [p.text for p in doc.paragraphs if p.text.strip()]
-        return '\n\n'.join(paragraphs)
+        main_text = '\n\n'.join(paragraphs)
+        
+        # Extract comments from XML
+        comments = extract_docx_comments(filepath)
+        
+        if comments:
+            main_text += "\n\n---\n## 💬 USER COMMENTS FROM DOCUMENT\n\n"
+            for comment in comments:
+                main_text += f"**[Comment by {comment['author']}]:** {comment['text']}\n"
+                if comment.get('quoted_text'):
+                    main_text += f"  ↳ *On text:* \"{comment['quoted_text']}\"\n"
+                main_text += "\n"
+        
+        return main_text
     except ImportError:
         raise ImportError(
             "python-docx required for .docx files. "
             "Install with: pip install python-docx"
         )
+
+
+def extract_docx_comments(filepath: str) -> List[dict]:
+    """Extract comments from a .docx file using XML parsing."""
+    import zipfile
+    from xml.etree import ElementTree as ET
+    
+    comments = []
+    
+    try:
+        with zipfile.ZipFile(filepath, 'r') as zf:
+            # Check if comments.xml exists
+            if 'word/comments.xml' not in zf.namelist():
+                return []
+            
+            # Parse comments.xml
+            with zf.open('word/comments.xml') as f:
+                tree = ET.parse(f)
+                root = tree.getroot()
+            
+            # Word XML namespace
+            ns = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
+            
+            for comment in root.findall('.//w:comment', ns):
+                author = comment.get('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}author', 'Unknown')
+                
+                # Extract comment text
+                text_parts = []
+                for t in comment.findall('.//w:t', ns):
+                    if t.text:
+                        text_parts.append(t.text)
+                
+                if text_parts:
+                    comments.append({
+                        'author': author,
+                        'text': ''.join(text_parts),
+                        'quoted_text': None  # Could extract with more complex parsing
+                    })
+    except Exception:
+        # If comment extraction fails, continue without comments
+        pass
+    
+    return comments
 
 
 def parse_doc(filepath: str) -> str:

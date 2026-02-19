@@ -184,10 +184,26 @@ manager.feedback("wayne", generated_text, sounds_like_me=True)
 |--------|---------|-------|
 | `.txt` | ✅ | Plain text, cleanest |
 | `.md` | ✅ | Markdown preserved |
-| `.docx` | ✅ | Word 2007+, extracts text |
+| `.docx` | ✅ | Word 2007+, extracts text + comments |
 | `.doc` | ⚠️ | Legacy Word, best-effort |
 | `.pdf` | ✅ | Extracts text (not scanned images) |
 | `.rtf` | ✅ | Rich text, strips formatting |
+
+**Word comments supported!**
+
+If you add comments in Word (Review → New Comment), the agent reads them:
+
+```markdown
+## 💬 USER COMMENTS FROM DOCUMENT
+
+**[Comment by Wayne]:** This transition feels weak, help me fix it
+  ↳ *On text:* "Furthermore, the implications..."
+
+**[Comment by Wayne]:** Not sure about this citation
+  ↳ *On text:* "Smith (2019) argues..."
+```
+
+This lets you annotate your document directly in Word instead of writing separate instructions.
 
 ```
 📝 Agent nudge: Drop your files or paste text directly.
