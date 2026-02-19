@@ -179,6 +179,23 @@ manager.feedback("wayne", generated_text, sounds_like_me=True)
 - 500+ words each
 - User's own writing (solo-authored preferred)
 
+**Accepted formats:**
+| Format | Support | Notes |
+|--------|---------|-------|
+| `.txt` | ✅ | Plain text, cleanest |
+| `.md` | ✅ | Markdown preserved |
+| `.docx` | ✅ | Word 2007+, extracts text |
+| `.doc` | ⚠️ | Legacy Word, best-effort |
+| `.pdf` | ✅ | Extracts text (not scanned images) |
+| `.rtf` | ✅ | Rich text, strips formatting |
+
+```
+📝 Agent nudge: Drop your files or paste text directly.
+I accept .docx, .pdf, .txt, and more.
+
+If pasting, just paste the text — no need to format it.
+```
+
 ### Stage 3: Drafting (Voice-Constrained)
 
 **Generation with voice profile:**
