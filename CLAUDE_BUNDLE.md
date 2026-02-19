@@ -77,7 +77,7 @@ Flag gaps that support user's contribution.
 
 Extract user's writing style from 5-10 samples (500+ words each).
 
-**Features to extract:**
+**Statistical Mode (Traditional):**
 - Sentence length (mean, std)
 - Vocabulary richness (type-token ratio)
 - Passive voice ratio
@@ -86,7 +86,20 @@ Extract user's writing style from 5-10 samples (500+ words each).
 - First-person usage
 - Citation density
 
+**Adaptive Mode (AI-Native):**
+- Embedding-based signature (captures gestalt)
+- Feedback learning ("sounds like me" / "doesn't")
+- Contrastive anchors (what voice is NOT)
+- Calibrating threshold
+
 **Output:** Voice profile JSON + generation constraints.
+
+**User feedback loop:**
+```
+After generation, ask: "Does this sound like you?"
+[👍 Yes] → Strengthen this direction
+[👎 No]  → Push away from this style
+```
 
 ---
 
@@ -258,6 +271,72 @@ project/
 → Run 5-dimension audit
 → Provide actionable feedback
 ```
+
+---
+
+## Zotero Integration
+
+Connect your Zotero library for voice learning and citation management.
+
+### Setup
+
+```bash
+# Set credentials (choose one method)
+
+# Option 1: Environment variables
+export ZOTERO_USER_ID="your_user_id"
+export ZOTERO_API_KEY="your_api_key"
+
+# Option 2: Config file
+mkdir -p ~/.commscribe
+cat > ~/.commscribe/zotero.json << EOF
+{
+  "user_id": "your_user_id",
+  "api_key": "your_api_key"
+}
+EOF
+```
+
+Get your credentials at [zotero.org/settings/keys](https://www.zotero.org/settings/keys)
+
+### Features
+
+**Voice Learning from Your Papers**
+```
+Pull writing samples from Zotero
+→ Gets solo-authored papers (pure voice)
+→ Extracts abstracts for style analysis
+→ Builds voice profile
+```
+
+**Literature Search**
+```
+Search user's library for: [query]
+→ Searches title, abstract, tags
+→ Returns matching papers with citations
+→ Prioritizes user's existing knowledge
+```
+
+**Citation Verification**
+```
+Verify: "Meraz & Papacharissi (2013)"
+→ Matches against library
+→ Returns full citation info
+→ Flags if not in library
+```
+
+### In Your Workflow
+
+When user says "setup voice from my papers":
+1. Connect to Zotero
+2. Get solo-authored or first-authored papers
+3. Extract abstracts/text
+4. Build voice profile
+
+When user says "search my library":
+1. Query user's Zotero
+2. Return relevant citations
+3. Note gaps for external search
 
 ---
 
