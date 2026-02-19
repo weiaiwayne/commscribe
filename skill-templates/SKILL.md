@@ -264,99 +264,88 @@ Or just press Enter to continue without notes.
 
 ## Iterative Revision Workflow
 
-Writing is back-and-forth. Here's how it works:
+Writing is a conversation. Upload once, then talk.
 
-### Round 1: User → Agent
+### The Flow
+
 ```
-User: [uploads draft.docx]
-💬 "Help me strengthen the theoretical framing. 
-    The lit review feels disconnected from my RQ."
-```
-
-### Round 1: Agent → User
-```markdown
-## Your draft with my edits
-
-[Original text with tracked changes]
-
-📝 Agent note: I restructured paragraphs 2-3 to connect 
-Barzilai-Nahon directly to your RQ. See if this works.
-
-⚠️ Agent note: Your transition on p.4 is abrupt. 
-I offered two options — pick the one that fits your voice.
-
-🤔 Agent note: I'm not sure what you mean by "platform affordances" 
-here. Did you mean technical features or social norms? 
-I need you to clarify before I can edit this section.
-
-💬 **Questions for you:**
-1. Option A or B for the transition?
-2. Clarify "platform affordances"?
-3. Keep the Castells cite or cut it?
+1. User uploads draft.docx
+2. Agent responds with edits + questions
+3. User replies in chat: "Option A. Cut that paragraph."
+4. Agent applies changes, shows result, asks next questions
+5. User replies: "Looks good. Now fix the methods section."
+6. Agent continues...
+7. When done: User downloads final version
 ```
 
-### Round 2: User → Agent
-```
-User: [uploads revised_draft_v2.docx]
-💬 "Option A for transition. By affordances I mean technical 
-    features. Cut Castells — it's tangential. Also, can you 
-    make the methods section less passive?"
-```
+### Example Conversation
 
-### Round 2: Agent → User
-```markdown
-## Version 2 with my edits
+**User:** [uploads draft.docx]  
+*"Help me strengthen the theoretical framing."*
 
-[Updated text]
+**Agent:**
+> Here's your draft with my suggested edits:
+> 
+> ~~Furthermore, the implications are significant.~~  
+> → **This reframing of gatekeeping as networked process shifts our understanding of...**
+> 
+> 📝 I restructured paragraphs 2-3 to connect Barzilai-Nahon to your RQ.
+> 
+> 🤔 Question: On p.4 you mention "platform affordances" — do you mean technical features or social norms? I need to know before editing that section.
+> 
+> 💬 Also: Option A (keep Castells) or Option B (cut him)?
 
-✅ Applied Option A transition
-✅ Clarified affordances as technical features
-✅ Removed Castells reference
-📝 Agent note: Revised methods to active voice. 
-   Changed "Data were collected" → "We collected data"
-   Let me know if that's too informal for your target journal.
+**User:** *"Technical features. Option B, cut Castells. Also make methods less passive."*
 
-💬 **Ready for another pass, or move to audit?**
-```
+**Agent:**
+> ✅ Clarified affordances = technical features  
+> ✅ Removed Castells reference  
+> ✅ Revised methods to active voice:
+> 
+> ~~Data were collected from~~ → **We collected data from**  
+> ~~Analysis was conducted~~ → **We analyzed**
+> 
+> 📝 Is that too informal for your target journal?
+> 
+> Here's the updated draft: [shows full text]
 
-### Tracking State
+**User:** *"Perfect. What about the conclusion?"*
 
-Each revision cycle preserves:
-```
-project/
-├── drafts/
-│   ├── v1_original.docx
-│   ├── v1_agent_response.md
-│   ├── v2_user_revision.docx
-│   ├── v2_agent_response.md
-│   └── ...
-├── REVISION_LOG.md        # Summary of all changes
-└── DECISIONS.md           # User choices recorded
-```
+**Agent:** *[continues...]*
+
+### No Need to Re-upload
+
+The agent maintains the working document in memory. Just talk:
+- "Fix paragraph 3"
+- "Make that shorter"  
+- "I don't like that phrasing"
+- "Add a transition here"
+- "What about the lit review?"
+
+Re-upload only if you edited offline and want to sync.
 
 ### Commands
 
 | Command | Action |
 |---------|--------|
-| `/revise` | Upload new version with notes |
-| `/continue` | Agent continues from last state |
-| `/diff` | Show changes between versions |
-| `/decisions` | Review all choices made |
-| `/restart` | Start fresh (preserves history) |
+| `/show` | Display current draft |
+| `/download` | Get current version as file |
+| `/diff` | Show all changes since upload |
+| `/undo` | Revert last change |
+| `/history` | Show revision log |
 
 ### Agent Behavior
 
 **Always:**
-- Show tracked changes (insertions/deletions)
+- Show what changed (strikethrough → new)
 - Explain reasoning for edits
-- Ask clarifying questions before guessing
+- Ask before guessing
 - Offer options when multiple approaches exist
-- Record user decisions for consistency
 
 **Never:**
 - Make silent changes
-- Override user's explicit preferences
-- Assume what user means when ambiguous
+- Override explicit preferences
+- Require file uploads for every change
 
 ### Stage 4: Independent Audit
 
