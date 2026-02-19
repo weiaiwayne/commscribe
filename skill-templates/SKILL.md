@@ -196,6 +196,41 @@ I accept .docx, .pdf, .txt, and more.
 If pasting, just paste the text — no need to format it.
 ```
 
+**Custom instructions with uploads:**
+
+Users can add notes when uploading samples:
+
+```
+📎 paper_intro.docx
+💬 "This is my strongest writing — weight this heavily"
+
+📎 methods_draft.pdf  
+💬 "Ignore this section's passive voice, it was required by the journal"
+
+📎 dissertation_ch3.docx
+💬 "Focus on theoretical arguments, skip the lit review parts"
+```
+
+**Instruction types:**
+| Instruction | Effect |
+|-------------|--------|
+| "Weight heavily" | Higher influence on voice profile |
+| "Ignore X" | Exclude specific patterns |
+| "Focus on Y" | Prioritize certain sections/styles |
+| "This is [section type]" | Context for style extraction |
+| "I want to change X" | Learn voice but not this habit |
+
+```
+📝 Agent nudge: Any notes about these samples?
+
+Examples:
+- "The first one is my best writing"
+- "Ignore the passive voice in paper2, it was journal-required"
+- "I want to be less hedge-y than these samples show"
+
+Or just press Enter to continue without notes.
+```
+
 ### Stage 3: Drafting (Voice-Constrained)
 
 **Generation with voice profile:**
