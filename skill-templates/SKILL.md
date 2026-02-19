@@ -370,6 +370,96 @@ Re-upload only if you edited offline and want to sync.
 - Override explicit preferences
 - Require file uploads for every change
 
+---
+
+## Learning From Feedback
+
+The agent learns from every interaction and gets better at matching your preferences.
+
+### What Gets Learned
+
+| Feedback Type | Example | What Agent Learns |
+|---------------|---------|-------------------|
+| **Accept edit** | User keeps agent's change | "This edit style works" |
+| **Reject edit** | User reverts or rewrites | "Don't do this again" |
+| **Explicit praise** | "Perfect!" | Reinforce that approach |
+| **Explicit correction** | "Too formal" | Adjust tone preference |
+| **Repeated requests** | "Make it shorter" (3x) | Default to concise |
+
+### Learning Storage
+
+```
+project/
+├── VOICE_PROFILE.json      # Writing style
+├── PREFERENCES.json        # Learned preferences
+│   ├── edits_accepted: [...]
+│   ├── edits_rejected: [...]
+│   ├── tone_adjustments: {...}
+│   ├── common_requests: [...]
+│   └── explicit_rules: [...]
+└── REVISION_HISTORY.json   # Full interaction log
+```
+
+### Example Learning Cycle
+
+**Session 1:**
+```
+Agent: "Changed 'important' → 'significant'"
+User: "No, keep 'important'. I don't like thesaurus swaps."
+→ Agent saves: { "avoid": "synonym_substitution" }
+```
+
+**Session 2:**
+```
+Agent: [Doesn't suggest synonym swaps anymore]
+
+📝 Agent note: I'm not suggesting word swaps because 
+you told me you don't like them. Say "/preferences reset" 
+to clear learned preferences.
+```
+
+### Explicit Rules
+
+Users can also set explicit preferences:
+
+```
+User: "Never use 'Furthermore' or 'Moreover'"
+→ Agent saves: { "banned_words": ["Furthermore", "Moreover"] }
+
+User: "Always use Oxford comma"
+→ Agent saves: { "oxford_comma": true }
+
+User: "I prefer active voice"
+→ Agent saves: { "voice_preference": "active" }
+```
+
+### Commands
+
+| Command | Action |
+|---------|--------|
+| `/preferences` | Show learned preferences |
+| `/preferences reset` | Clear all learned preferences |
+| `/preferences add [rule]` | Add explicit rule |
+| `/preferences remove [rule]` | Remove a rule |
+
+### Cross-Session Learning
+
+Preferences persist across sessions. When you start a new project:
+
+```
+📝 Agent note: Loading your preferences from previous sessions:
+- Avoid synonym substitution
+- Prefer active voice  
+- Use Oxford comma
+- 23 edits accepted, 5 rejected (82% approval rate)
+
+Type /preferences to review or /preferences reset to start fresh.
+```
+
+### Privacy Note
+
+All learning is local to your workspace. Nothing leaves your machine unless you explicitly export it.
+
 ### Stage 4: Independent Audit
 
 **Different model reviews:**
